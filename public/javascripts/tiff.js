@@ -1,101 +1,64 @@
 $(document).ready(function() {
-  $('#select-a button').click(function() {
-    main("a", this);
+  $('#select1 button').click(function() {
+    main(1, this);
     return false;
   });
 
-  $('#select-b button').click(function() {
-    main("b", this);
+  $('#select2 button').click(function() {
+    main(2, this);
     return false;
+  });
+
+  $('.btn-edit').click(function(e) {
+    var el = e.currentTarget;
   });
 });
 
 function main(fid, obj) {
   var 
-  name,
-  style,
-  other,
-  otherName,
-  otherStyle,
-  $this = $(obj),
-  firstStyle = "rgba(0, 0, 0, 1)",
-  secondStyle = "rgba(247, 160, 163, 0.6)",
-  canvases = [$('#letter1')[0], $('#letter2')[0], $('#letter3')[0], $('#letter4')[0]];
+  control,
+  experiment,
+  $this = $(obj);
 
-  if (fid === "a") {
-    name = $('#font-a').val();
-    style = firstStyle;
-    other = "b"
-    otherName = $('#font-b').val();
-    otherStyle = secondStyle;
+  if (fid === 1) {
+    control = $('#control').val();
+    experiment = $('#experiment').val();
   } else {
-    name = $('#font-b').val();
-    style = secondStyle;
-    other = "a"
-    otherName = $('#font-a').val();
-    otherStyle = firstStyle;
+    control = $('#experiment').val();
+    experiment = $('#control').val();
   }
 
   // Display vs. Reset
   if ($this.text().toLowerCase() === "display") {
-    // Lock input field and toggle button text
-    if (fid === "a") {
-      $('#select-a').find('input').attr('disabled', true);
-    } else {
-      $('#select-b').find('input').attr('disabled', true);
-    }
-    $this.text("Reset"); 
+    $('#select' + fid).find('input').attr('disabled', true);
+    $this.text("Cancel"); 
 
     WebFont.load({
       google: {
-                families: [name]
-              }
+        families: [control]
+      }
     });
-
-    display(canvases[0], name, style, "R");
-    display(canvases[1], name, style, "a");
-    display(canvases[2], name, style, "g");
-    display(canvases[3], name, style, "h");
+ 
+    displayAll(fid, control);
   } else {
-    // Unlock input field and toggle button text
-    if (fid === "a") {
-      $('#select-a').find('input').attr('disabled', false);
-    } else {
-      $('#select-b').find('input').attr('disabled', false);
-    }
+    $('#select' + fid).find('input').attr('disabled', false);
     $this.text("Display");
-
-    clean(canvases);
-
-    // Re-draw other font if it was there
-    if (hasFilledOtherFont(other)) {
-      display(canvases[0], otherName, otherStyle, $('#letter1').data('letter'));
-      display(canvases[1], otherName, otherStyle, $('#letter2').data('letter'));
-      display(canvases[2], otherName, otherStyle, $('#letter3').data('letter'));
-      display(canvases[3], otherName, otherStyle, $('#letter4').data('letter'));
-    }
+    hideAll(fid);
   }
 }
 
-function display(canvas, name, style, letter) {
-  var context = canvas.getContext('2d');
-  var x = canvas.width / 2;
-  var y = canvas.height / 2;
+function displayAll(id, name) {
+  $('.font' + id).each(function() {
+    this.style.fontFamily = name;
 
-  context.font = "normal 120px " + name;
-  context.textAlign = "center";
-  context.textBaseline = "middle";
-  context.fillStyle = style;
-  context.fillText(letter, x, y);
+    $(this).animate({
+      opacity: 1
+    }, 500);
+  }); 
 }
 
-function hasFilledOtherFont(fid) {
-  var other = "#select-" + fid;
-  return $(other).val() === "";
-}
-
-function clean(canvases) {
-  for (var i = 0; i < canvases.length; i++) {
-    canvases[i].width = canvases[i].width;
-  }
+function hideAll(id) {
+  $('.font' + id).animate({
+    opacity: 0
+  }, 500);
 }

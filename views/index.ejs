@@ -9,23 +9,42 @@
   </head>
 
   <body>
-    <div id="select-a">
+    <div id="select1">
       <label>Font A</label>
-      <input id="font-a" /> 
+      <input id="control" /> 
       <button>Display</button>
     </div>
 
-    <div id="select-b">
+    <div id="select2">
       <label>Font B</label>
-      <input id="font-b" />
+      <input id="experiment" />
       <button>Display</button>
     </div>
 
-    <canvas id="letter1" data-letter="R"></canvas>
-    <canvas id="letter2" data-letter="a"></canvas>
-    <canvas id="letter3" data-letter="g"></canvas>
-    <canvas id="letter4" data-letter="h"></canvas>
+    <div class="canvas">
+      <p class="letter1 font1" ref="edit1">R</p>
+      <p class="letter1 font2" ref="edit1">R</p>
+      <a href="#" id="edit1" class="btn-edit">Edit</a>
+    </div>
 
+    <div class="canvas">
+      <p class="letter2 font1" ref="edit2">a</p>
+      <p class="letter2 font2" ref="edit2">a</p>
+      <a href="#" id="edit2">Edit</a>
+    </div>
+
+    <div class="canvas">
+      <p class="letter3 font1" ref="edit3">g</p>
+      <p class="letter3 font2" ref="edit3">g</p>
+      <a href="#" id="edit3">Edit</a>
+    </div>
+    
+    <div class="canvas">
+      <p class="letter4 font1" ref="edit4">h</p>
+      <p class="letter4 font2" ref="edit4">h</p>
+      <a href="#" id="edit4">Edit</a>
+    </div>
+    
     <form action="#">
       <label>Show both</label>
       <input id="show-both" type="radio" value="0" />
