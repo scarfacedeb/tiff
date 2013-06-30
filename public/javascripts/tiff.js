@@ -11,14 +11,17 @@ $(document).ready(function() {
 
   $('.btn-edit').click(function(e) {
     var el = e.currentTarget;
+    var letter = el.id
+
+    $(this).parent().parent().toggleClass("flipped");
   });
 });
 
-function main(fid, obj) {
+function main(fid, context) {
   var 
   control,
   experiment,
-  $this = $(obj);
+  $this = $(context);
 
   if (fid === 1) {
     control = $('#control').val();

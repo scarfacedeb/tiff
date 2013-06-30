@@ -9,41 +9,77 @@
   </head>
 
   <body>
-    <div id="select1">
-      <label>Font A</label>
-      <input id="control" /> 
-      <button>Display</button>
-    </div>
+    <section>
+      <div id="select1">
+        <label>Font A</label>
+        <input id="control" /> 
+        <button>Display</button>
+      </div>
 
-    <div id="select2">
-      <label>Font B</label>
-      <input id="experiment" />
-      <button>Display</button>
-    </div>
+      <div id="select2">
+        <label>Font B</label>
+        <input id="experiment" />
+        <button>Display</button>
+      </div>
+    </section>
 
-    <div class="canvas">
-      <p class="letter1 font1" ref="edit1">R</p>
-      <p class="letter1 font2" ref="edit1">R</p>
-      <a href="#" id="edit1" class="btn-edit">Edit</a>
-    </div>
+    <section>
+      <div class="container">
+        <div class="canvas">
+          <figure class="front">
+            <p class="letter1 font1">R</p>
+            <p class="letter1 font2">R</p>
+            <a href="#" id="letter1" class="btn-edit">Edit</a>
+          </figure>
+          <figure class="back">
+            <input class="letter1" /> 
+            <a href="#" class="btn-edit">Edit</a>
+          </figure>
+        </div>
+      </div>
 
-    <div class="canvas">
-      <p class="letter2 font1" ref="edit2">a</p>
-      <p class="letter2 font2" ref="edit2">a</p>
-      <a href="#" id="edit2">Edit</a>
-    </div>
+      <div class="container">
+        <div class="canvas">
+          <figure class="front">
+            <p class="letter2 font1">a</p>
+            <p class="letter2 font2">a</p>
+            <a href="#" id="letter2" class="btn-edit">Edit</a>
+          </figure>
+          <figure class="back">
+            <input class="letter2" /> 
+            <a href="#" class="btn-edit">Edit</a>
+          </figure>
+        </div>
+      </div>
 
-    <div class="canvas">
-      <p class="letter3 font1" ref="edit3">g</p>
-      <p class="letter3 font2" ref="edit3">g</p>
-      <a href="#" id="edit3">Edit</a>
-    </div>
-    
-    <div class="canvas">
-      <p class="letter4 font1" ref="edit4">h</p>
-      <p class="letter4 font2" ref="edit4">h</p>
-      <a href="#" id="edit4">Edit</a>
-    </div>
+      <div class="container">
+        <div class="canvas">
+          <figure class="front">
+            <p class="letter3 font1">a</p>
+            <p class="letter3 font2">a</p>
+            <a href="#" id="letter3" class="btn-edit">Edit</a>
+          </figure>
+          <figure class="back">
+            <input class="letter3" /> 
+            <a href="#" class="btn-edit">Edit</a>
+          </figure>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="canvas">
+          <figure class="front">
+            <p class="letter4 font1">a</p>
+            <p class="letter4 font2">a</p>
+            <a href="#" id="letter4" class="btn-edit">Edit</a>
+          </figure>
+          <figure class="back">
+            <input class="letter4" /> 
+            <a href="#" class="btn-edit">Edit</a>
+          </figure>
+        </div>
+      </div>
+    </section>
     
     <form action="#">
       <label>Show both</label>
