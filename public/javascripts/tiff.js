@@ -9,11 +9,20 @@ $(document).ready(function() {
     return false;
   });
 
-  $('.btn-edit').click(function(e) {
+  $('.btn-toggle').click(function(e) {
     var el = e.currentTarget;
     var letter = el.id
 
-    $(this).parent().parent().toggleClass("flipped");
+    $(this).parents('.canvas').toggleClass("flipped");
+  });
+
+  $('.btn-edit').click(function(e) {
+    var $this = $(this);
+    var id = $this.siblings('input').attr('class');
+    var letter = $this.parent().find('input.' + id).val();
+    var targets = $this.parents('.canvas').find('p.' + id);
+
+    targets.text(letter);
   });
 });
 

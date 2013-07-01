@@ -4,6 +4,7 @@ body {
 }
 a {
   color: #00B7FF;
+  cursor: pointer;
 }
 .container {
   width: 200px;
