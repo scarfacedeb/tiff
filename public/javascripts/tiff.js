@@ -20,9 +20,11 @@ $(document).ready(function() {
     var $this = $(this);
     var id = $this.siblings('input').attr('class');
     var letter = $this.parent().find('input.' + id).val();
-    var targets = $this.parents('.canvas').find('p.' + id);
 
-    targets.text(letter);
+    if (letter.length > 0) {
+      var targets = $this.parents('.canvas').find('p.' + id);
+      targets.text(letter);
+    }
   });
 });
 
