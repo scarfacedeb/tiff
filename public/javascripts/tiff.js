@@ -1,10 +1,10 @@
 $(document).ready(function() {
-  $('#select1 button').click(function() {
+  $('#select1 a.btn').click(function() {
     main(1, this);
     return false;
   });
 
-  $('#select2 button').click(function() {
+  $('#select2 a.btn').click(function() {
     main(2, this);
     return false;
   });
@@ -39,7 +39,11 @@ function main(fid, context) {
     experiment = $('#experiment').val();
   } else {
     control = $('#experiment').val();
-    experiment = $('#control').val();
+    experiment = $('#control').val(); 
+  }
+
+  if (control.length < 1) {
+    return;
   }
 
   // Display vs. Reset
