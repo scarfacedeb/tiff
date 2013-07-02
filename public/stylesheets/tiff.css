@@ -2,17 +2,21 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-a {
-  color: #00B7FF;
+body a {
   cursor: pointer;
 }
-.container {
+body .container {
+  max-width: 814px;
+  margin: 0 auto;
+}
+body .container .font-display .font-space {
   width: 200px;
   height: 200px;
   position: relative;
-  -webkit-perspective: 800px;
+  display: inline-block;
+  -webkit-perspective: 400px;
 }
-.container .canvas {
+body .container .font-display .font-space .canvas {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -20,7 +24,13 @@ a {
   transition: -webkit-transform 1s;
   -webkit-transform-style: preserve-3d;
 }
-.container .canvas figure {
+body .container .font-display .font-space .canvas.flipped {
+  -webkit-transform: rotateY(180deg);
+}
+body .container .font-display .font-space .canvas.flipped .front {
+  display: none;
+}
+body .container .font-display .font-space .canvas figure {
   display: block;
   position: absolute;
   width: 100%;
@@ -28,12 +38,28 @@ a {
   margin: 0;
   -webkit-backface-visibility: hidden;
 }
-.container .canvas figure.front p {
+body .container .font-display .font-space .canvas figure.front p {
+  width: 100%;
+  line-height: 200px;
+  font-size: 120px;
+  position: absolute;
+  text-align: center;
+  margin: 0;
+  padding: 0;
   opacity: 0;
 }
-.container .canvas figure.back {
+body .container .font-display .font-space .canvas figure.front a {
+  position: absolute;
+}
+body .container .font-display .font-space .canvas figure.back {
   -webkit-transform: rotateY(180deg);
 }
-.container .canvas.flipped {
-  -webkit-transform: rotateY(180deg);
+body .container .font-display .font-space .canvas .font1 {
+  color: #00B7FF;
+}
+body .container .font-display .font-space .canvas .font2 {
+  color: #ea6264;
+}
+body .container .font-select {
+  margin-bottom: 50px;
 }

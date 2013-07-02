@@ -66,7 +66,7 @@ function displayAll(id, name) {
     this.style.fontFamily = name;
 
     $(this).animate({
-      opacity: 1
+      opacity: 0.5
     }, 500);
   }); 
 }
