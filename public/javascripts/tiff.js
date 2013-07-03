@@ -26,6 +26,12 @@ $(document).ready(function() {
       targets.text(letter);
     }
   });
+
+  $("footer a").hover(function() { 
+    $(this).stop().animate({ color: "#00B7FF" }, "slow"); 
+  }, function() { 
+    $(this).stop().animate({ color: "#AAAAAA" }, "slow"); // original color 
+  });
 });
 
 function main(fid, context) {

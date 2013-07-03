@@ -24,7 +24,9 @@ body {
   margin: 0;
 }
 body a {
+  font-size: 90%;
   cursor: pointer;
+  text-decoration: none;
 }
 body .container {
   max-width: 814px;
@@ -47,7 +49,10 @@ body #secondary h2 {
   line-height: 1.3em;
 }
 body #primary {
-  padding-top: 50px;
+  padding: 50px 0;
+}
+body #primary .container .font-display {
+  padding-bottom: 50px;
 }
 body #primary .container .font-display .font-space {
   width: 200px;
@@ -153,7 +158,7 @@ body #primary .container .font-select #select1 {
 body #primary .container .font-select #select1 a.btn {
   color: #FFF;
   background-color: #72B3CC;
-  padding: 8px;
+  padding: 9px;
 }
 body #primary .container .font-select #select2 {
   float: right;
@@ -161,7 +166,7 @@ body #primary .container .font-select #select2 {
 body #primary .container .font-select #select2 a.btn {
   color: #FFF;
   background-color: #c75646;
-  padding: 8px;
+  padding: 9px;
 }
 body #primary .container .font-select label {
   font-size: 20px;
@@ -173,4 +178,24 @@ body #primary .container .font-select input {
   font-size: 15px;
   padding: 5px 10px;
   margin: 0;
+}
+body #primary .container img#end {
+  display: block;
+  margin: 0 auto;
+}
+body #primary .container footer {
+  margin-top: 50px;
+}
+body #primary .container footer ul {
+  padding: 0;
+  margin: 0 auto;
+}
+body #primary .container footer ul li {
+  color: #aaaaaa;
+  display: inline-block;
+  padding-right: 50px;
+  vertical-align: middle;
+}
+body #primary .container footer ul li a {
+  color: #aaaaaa;
 }

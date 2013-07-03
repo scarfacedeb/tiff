@@ -7,7 +7,9 @@ body {
   margin: 0; 
 
   a {
+    font-size: 90%;
     cursor: pointer;
+    text-decoration: none;
   }
 
   .container {
@@ -35,10 +37,12 @@ body {
   }
 
   #primary {
-    padding-top: 50px;
+    padding: 50px 0;
 
     .container {
       .font-display {
+        padding-bottom: 50px;
+
         .font-space { 
           width: 200px;
           height: 200px;
@@ -135,7 +139,7 @@ body {
           a.btn {
             color: #FFF;
             background-color: #72B3CC;
-            padding: 8px;
+            padding: 9px;
           }
         }
         #select2 {
@@ -144,7 +148,7 @@ body {
           a.btn {
             color: #FFF;
             background-color: @color2;
-            padding: 8px;
+            padding: 9px;
           }
         }
 
@@ -159,6 +163,31 @@ body {
           font-size: 15px;
           padding: 5px 10px;
           margin: 0;
+        }
+      }
+
+      img#end {
+        display: block;
+        margin: 0 auto;
+      }
+
+      footer {
+        margin-top: 50px;
+
+        ul {
+          padding: 0;
+          margin: 0 auto;
+
+          li {
+            color: lighten(#444, 40%);
+            display: inline-block;
+            padding-right: 50px;
+            vertical-align: middle;
+
+            a {
+              color: lighten(#444, 40%);
+            }
+          }
         }
       }
     }

@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'tiff - a visual typeface diff tool.' });
+  res.render('index', { title: 'Tiff - a visual typeface diff tool.' });
 };
