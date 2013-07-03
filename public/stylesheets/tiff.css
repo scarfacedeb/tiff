@@ -32,6 +32,12 @@ body .container {
   max-width: 814px;
   margin: 0 auto;
 }
+body .left {
+  float: left;
+}
+body .right {
+  float: right;
+}
 body #secondary {
   color: #EEE;
   padding: 50px 0;
@@ -40,7 +46,7 @@ body #secondary {
 body #secondary h1 {
   font-family: 'Merriweather', 'Georgia', serif;
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 701;
   margin: 0;
 }
 body #secondary h2 {
@@ -184,18 +190,15 @@ body #primary .container img#end {
   margin: 0 auto;
 }
 body #primary .container footer {
+  overflow: hidden;
   margin-top: 50px;
 }
-body #primary .container footer ul {
-  padding: 0;
-  margin: 0 auto;
-}
-body #primary .container footer ul li {
+body #primary .container footer p {
   color: #aaaaaa;
   display: inline-block;
   padding-right: 50px;
-  vertical-align: middle;
+  margin: 0;
 }
-body #primary .container footer ul li a {
+body #primary .container footer p a {
   color: #aaaaaa;
 }
