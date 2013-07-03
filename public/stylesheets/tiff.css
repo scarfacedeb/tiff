@@ -42,7 +42,7 @@ body #primary .container .font-display .font-space .canvas {
   width: 100%;
   height: 100%;
   position: absolute;
-  border: 1px dotted #bbb;
+  border: 1px solid #bbb;
   transition: -webkit-transform 1s;
   -webkit-transform-style: preserve-3d;
 }
@@ -70,17 +70,40 @@ body #primary .container .font-display .font-space .canvas figure.front p {
   padding: 0;
   opacity: 0;
 }
-body #primary .container .font-display .font-space .canvas figure.front a {
+body #primary .container .font-display .font-space .canvas figure.front p.font1 {
+  font-family: Helvetica;
+  opacity: 0.5;
+}
+body #primary .container .font-display .font-space .canvas figure.front img {
   position: absolute;
+  cursor: pointer;
+  padding: 3px 0 0 3px;
 }
 body #primary .container .font-display .font-space .canvas figure.back {
+  color: #EEE;
+  text-align: center;
+  background-image: url('../images/random_grey_variations.png');
   -webkit-transform: rotateY(180deg);
+}
+body #primary .container .font-display .font-space .canvas figure.back p {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+body #primary .container .font-display .font-space .canvas figure.back input {
+  width: 120px;
+  display: block;
+  margin: 20px auto;
+}
+body #primary .container .font-display .font-space .canvas figure.back a {
+  padding: 4px 8px;
+  border: 1px solid #333;
+  box-shadow: -1px -1px 1px #333333 inset;
 }
 body #primary .container .font-display .font-space .canvas .font1 {
   color: #00B7FF;
 }
 body #primary .container .font-display .font-space .canvas .font2 {
-  color: #EA6264;
+  color: #C75646;
 }
 body #primary .container .font-select {
   width: 100%;
