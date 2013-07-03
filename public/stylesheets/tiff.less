@@ -7,7 +7,6 @@ body {
   margin: 0; 
 
   a {
-    font-size: 90%;
     cursor: pointer;
     text-decoration: none;
   }
@@ -30,6 +29,10 @@ body {
     padding: 50px 0;
     background-image: url('../images/random_grey_variations.png');
 
+    .container {
+      overflow: hidden;
+    }
+
     h1 {
       font-family: 'Merriweather', 'Georgia', serif;
       font-size: 60px;
@@ -41,6 +44,18 @@ body {
       width: 50%;
       font-size: 20px;
       line-height: 1.3em;
+    }
+
+    p {
+      width: 40%;
+      color: darken(#EEE, 10%);
+      font-size: 90%;
+      line-height: 1.5em;
+      padding-top: 6px;
+
+      a {
+        color: #00B7FF;
+      }
     }
   }
 
@@ -180,6 +195,7 @@ body {
       }
 
       footer {
+        font-size: 90%;
         overflow: hidden;
         margin-top: 50px;
 
@@ -192,6 +208,10 @@ body {
           a {
             color: lighten(#444, 40%);
           }
+        }
+
+        .fb-like {
+          padding-right: 20px;
         }
       }
     }

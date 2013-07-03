@@ -24,7 +24,6 @@ body {
   margin: 0;
 }
 body a {
-  font-size: 90%;
   cursor: pointer;
   text-decoration: none;
 }
@@ -43,6 +42,9 @@ body #secondary {
   padding: 50px 0;
   background-image: url('../images/random_grey_variations.png');
 }
+body #secondary .container {
+  overflow: hidden;
+}
 body #secondary h1 {
   font-family: 'Merriweather', 'Georgia', serif;
   font-size: 60px;
@@ -53,6 +55,16 @@ body #secondary h2 {
   width: 50%;
   font-size: 20px;
   line-height: 1.3em;
+}
+body #secondary p {
+  width: 40%;
+  color: #d5d5d5;
+  font-size: 90%;
+  line-height: 1.5em;
+  padding-top: 6px;
+}
+body #secondary p a {
+  color: #00B7FF;
 }
 body #primary {
   padding: 50px 0;
@@ -190,6 +202,7 @@ body #primary .container img#end {
   margin: 0 auto;
 }
 body #primary .container footer {
+  font-size: 90%;
   overflow: hidden;
   margin-top: 50px;
 }
@@ -201,4 +214,7 @@ body #primary .container footer p {
 }
 body #primary .container footer p a {
   color: #aaaaaa;
+}
+body #primary .container footer .fb-like {
+  padding-right: 20px;
 }
