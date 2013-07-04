@@ -12,8 +12,8 @@
     <section id="secondary">
       <div class="container">
         <h1>Tiff</h1>
-        <h2 class="left">A tool that visually contrasts the differences between two fonts. Built by noob and for noobs.</h2>
-        <p class="right">Currently supports fonts from the <a href="//www.google.com/fonts/">Google Web Fonts library</a>. Best viewed with Google Chrome (12+) and Mozilla Firefox (10+).</p>
+        <h2 class="left">A type diff tool that visually contrasts the differences between two fonts.</h2>
+        <p class="right">Currently supports fonts from the <a href="//www.google.com/fonts/">Google Web Fonts library</a>. Best if viewed with Google Chrome (12+) or Mozilla Firefox (10+).</p>
       </div>
     </section>
 
@@ -22,8 +22,8 @@
         <section class="font-select">
           <div id="select1">
             <label>Font A</label>
-            <input id="control" placeholder="Helvetica" /> 
-            <a class="btn">Display</a>
+            <input id="control" value="Helvetica" disabled="true" />
+            <a class="btn">Hide</a>
           </div>
 
           <div id="select2">
@@ -36,10 +36,10 @@
         <section class="font-display">
           <div class="font-space">
             <div class="canvas">
-              <figure class="front">
+              <figure class="front btn-toggle" title="Edit">
                 <p class="letter1 font1">R</p>
                 <p class="letter1 font2">R</p>
-                <img src="images/circle_info.png" alt="Edit" title="Edit" id="letter1" class="btn-toggle" />
+                <img src="images/circle_info.png" alt="Edit" title="Edit" class="btn-toggle" />
               </figure>
               <figure class="back">
                 <p>Enter a different letter</p>
@@ -52,10 +52,10 @@
 
           <div class="font-space">
             <div class="canvas">
-              <figure class="front">
+              <figure class="front btn-toggle" title="Edit">
                 <p class="letter2 font1">g</p>
                 <p class="letter2 font2">g</p>
-                <img src="images/circle_info.png" alt="Edit" title="Edit" id="letter2" class="btn-toggle" />
+                <img src="images/circle_info.png" alt="Edit" title="Edit" class="btn-toggle" />
               </figure>
               <figure class="back">
                 <p>Enter a different letter</p>
@@ -68,10 +68,10 @@
 
           <div class="font-space">
             <div class="canvas">
-              <figure class="front">
+              <figure class="front btn-toggle" title="Edit">
                 <p class="letter3 font1">h</p>
                 <p class="letter3 font2">h</p>
-                <img src="images/circle_info.png" alt="Edit" title="Edit" id="letter3" class="btn-toggle" />
+                <img src="images/circle_info.png" alt="Edit" title="Edit" class="btn-toggle" />
               </figure>
               <figure class="back">
                 <p>Enter a different letter</p>
@@ -84,10 +84,10 @@
 
           <div class="font-space">
             <div class="canvas">
-              <figure class="front">
+              <figure class="front btn-toggle" title="Edit">
                 <p class="letter4 font1">e</p>
                 <p class="letter4 font2">e</p>
-                <img src="images/circle_info.png" alt="Edit" title="Edit" id="letter4" class="btn-toggle" />
+                <img src="images/circle_info.png" alt="Edit" title="Edit" class="btn-toggle" />
               </figure>
               <figure class="back">
                 <p>Enter a different letter</p>

@@ -54,7 +54,7 @@ body #secondary h1 {
 body #secondary h2 {
   width: 50%;
   font-size: 20px;
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 body #secondary p {
   width: 40%;
@@ -114,6 +114,9 @@ body #primary .container .font-display .font-space .canvas figure {
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+body #primary .container .font-display .font-space .canvas figure.front:hover {
+  cursor: pointer;
+}
 body #primary .container .font-display .font-space .canvas figure.front p {
   width: 100%;
   line-height: 200px;
@@ -154,10 +157,6 @@ body #primary .container .font-display .font-space .canvas figure.back input {
 }
 body #primary .container .font-display .font-space .canvas figure.back a {
   padding: 4px 8px;
-  border: 1px solid #333;
-  -webkit-box-shadow: -1px -1px 1px #333333 inset;
-  -moz-box-shadow: -1px -1px 1px #333333 inset;
-  box-shadow: -1px -1px 1px #333333 inset;
 }
 body #primary .container .font-display .font-space .canvas .font1 {
   color: #00b7ff;
@@ -170,21 +169,25 @@ body #primary .container .font-select {
   overflow: hidden;
   margin-bottom: 50px;
 }
+body #primary .container .font-select #select1 a.btn,
+body #primary .container .font-select #select2 a.btn {
+  width: 67px;
+  color: #FFF;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 0;
+}
 body #primary .container .font-select #select1 {
   float: left;
 }
 body #primary .container .font-select #select1 a.btn {
-  color: #FFF;
   background-color: #72B3CC;
-  padding: 9px;
 }
 body #primary .container .font-select #select2 {
   float: right;
 }
 body #primary .container .font-select #select2 a.btn {
-  color: #FFF;
   background-color: #c75646;
-  padding: 9px;
 }
 body #primary .container .font-select label {
   font-size: 20px;

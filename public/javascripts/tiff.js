@@ -10,9 +10,6 @@ $(document).ready(function() {
   });
 
   $('.btn-toggle').click(function(e) {
-    var el = e.currentTarget;
-    var letter = el.id
-
     $(this).parents('.canvas').toggleClass("flipped");
   });
 
@@ -27,10 +24,16 @@ $(document).ready(function() {
     }
   });
 
+  $('figure.front').hover(function() {
+    $(this).stop().animate({ backgroundColor: "#EEEEEE" }, 'slow');
+  }, function() {
+    $(this).stop().animate({ backgroundColor: "#FFFFFF" }, 'slow'); // original color
+  });
+
   $("footer a").hover(function() { 
-    $(this).stop().animate({ color: "#00B7FF" }, "slow"); 
+    $(this).stop().animate({ color: "#00B7FF" }, 'slow'); 
   }, function() { 
-    $(this).stop().animate({ color: "#AAAAAA" }, "slow"); // original color 
+    $(this).stop().animate({ color: "#AAAAAA" }, 'slow'); // original color 
   });
 });
 
@@ -55,7 +58,7 @@ function main(fid, context) {
   // Display vs. Reset
   if ($this.text().toLowerCase() === "display") {
     $('#select' + fid).find('input').attr('disabled', true);
-    $this.text("Cancel"); 
+    $this.text("Hide"); 
 
     WebFont.load({
       google: {

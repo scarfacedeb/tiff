@@ -43,7 +43,7 @@ body {
     h2 {
       width: 50%;
       font-size: 20px;
-      line-height: 1.3em;
+      line-height: 1.5em;
     }
 
     p {
@@ -96,6 +96,10 @@ body {
               .backface-visibility;
 
               &.front {
+                &:hover {
+                  cursor: pointer;
+                }
+
                 p {
                   width: 100%;
                   line-height: 200px;
@@ -139,8 +143,6 @@ body {
 
                 a {
                   padding: 4px 8px;
-                  border: 1px solid #333;
-                  .box-shadow(-1px -1px 1px #333 inset);
                 }
               }
             }
@@ -156,22 +158,27 @@ body {
         overflow: hidden;
         margin-bottom: 50px;
 
+        #select1 a.btn, #select2 a.btn {
+          width: 67px;
+          color: #FFF;
+          text-align: center;
+          display: inline-block;
+          padding: 8px 0;
+        }
+
         #select1 {
           float: left;
 
           a.btn {
-            color: #FFF;
             background-color: #72B3CC;
-            padding: 9px;
           }
         }
+
         #select2 {
           float: right;
 
           a.btn {
-            color: #FFF;
             background-color: @color2;
-            padding: 9px;
           }
         }
 
