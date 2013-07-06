@@ -65,7 +65,7 @@ function main(fid, context) {
         families: [control]
       }
     });
- 
+
     displayAll(fid, control);
   } else {
     $('#select' + fid).find('input').attr('disabled', false);
@@ -82,10 +82,43 @@ function displayAll(id, name) {
       opacity: 0.5
     }, 500);
   }); 
+
+  if (!fontExists(name)) {
+    alert("Font does not exist.");
+  }
 }
 
 function hideAll(id) {
   $('.font' + id).animate({
     opacity: 0
   }, 500);
+}
+
+function fontExists(name) {
+  var f1 = $('#fontcheck1')[0];
+  var f2 = $('#fontcheck2')[0];
+
+  f1.style.fontFamily = "monospace";
+  f2.style.fontFamily = name + ",monospace";
+
+  var w1 = Number(f1.offsetWidth);
+  var w2 = Number(f2.offsetWidth);
+  var h1 = Number(f1.offsetHeight);
+  var h2 = Number(f2.offsetHeight);
+
+  // first check if it would fall back to system default monospace
+  if ((w1 === w2) && (h1 === h2)) {
+    // second check (in case the input IS system default monospace) if it would 
+    // fall back to Arial
+    f1.style.fontFamily = "Arial";
+    f2.style.fontFamily = name + ",Arial";
+    
+    if ((w1 === w2) && (h1 === h2)) {
+      return false;
+    } else {
+      return true;
+    }
+  } else {
+    return true;
+  }
 }
