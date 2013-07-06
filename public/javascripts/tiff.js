@@ -1,3 +1,8 @@
+Messenger.options = {
+  extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right',
+  theme: 'future'
+}
+
 $(document).ready(function() {
   $('#select1 a.btn').click(function() {
     main(1, this);
@@ -53,7 +58,7 @@ function main(fid, context) {
 
   if (control.length < 1) {
     return;
-  }
+  } 
 
   // Display vs. Reset
   if ($this.text().toLowerCase() === "display") {
@@ -63,10 +68,18 @@ function main(fid, context) {
     WebFont.load({
       google: {
         families: [control]
-      }
+      },
+      fontactive: function(name, description) { 
+                    displayAll(fid, name);
+                  },
+      fontinactive: function(name, description) {
+                      Messenger().post({
+                        message: "Sadly Tiff couldn't recognize that font.",
+                        type: 'error',
+                        showCloseButton: true
+                      });
+                    }
     });
-
-    displayAll(fid, control);
   } else {
     $('#select' + fid).find('input').attr('disabled', false);
     $this.text("Display");
@@ -74,18 +87,14 @@ function main(fid, context) {
   }
 }
 
-function displayAll(id, name) {
+function displayAll(id, name) { 
   $('.font' + id).each(function() {
     this.style.fontFamily = name;
 
     $(this).animate({
       opacity: 0.5
-    }, 500);
+    }, 500)
   }); 
-
-  if (!fontExists(name)) {
-    alert("Font does not exist.");
-  }
 }
 
 function hideAll(id) {
@@ -94,31 +103,35 @@ function hideAll(id) {
   }, 500);
 }
 
-function fontExists(name) {
-  var f1 = $('#fontcheck1')[0];
-  var f2 = $('#fontcheck2')[0];
-
-  f1.style.fontFamily = "monospace";
-  f2.style.fontFamily = name + ",monospace";
-
-  var w1 = Number(f1.offsetWidth);
-  var w2 = Number(f2.offsetWidth);
-  var h1 = Number(f1.offsetHeight);
-  var h2 = Number(f2.offsetHeight);
-
-  // first check if it would fall back to system default monospace
-  if ((w1 === w2) && (h1 === h2)) {
-    // second check (in case the input IS system default monospace) if it would 
-    // fall back to Arial
-    f1.style.fontFamily = "Arial";
-    f2.style.fontFamily = name + ",Arial";
-    
-    if ((w1 === w2) && (h1 === h2)) {
-      return false;
-    } else {
-      return true;
-    }
-  } else {
-    return true;
-  }
-}
+/*
+ *  // Old font existence detection
+ *
+ *  function fontExists(name) {
+ *    var f1 = $('#fontcheck1')[0];
+ *    var f2 = $('#fontcheck2')[0];
+ *
+ *    f1.style.fontFamily = "monospace";
+ *    f2.style.fontFamily = name + ",monospace";
+ *
+ *    var w1 = Number(f1.offsetWidth);
+ *    var w2 = Number(f2.offsetWidth);
+ *    var h1 = Number(f1.offsetHeight);
+ *    var h2 = Number(f2.offsetHeight);
+ *
+ *    // First check if it would fall back to system default monospace
+ *    if ((w1 === w2) && (h1 === h2)) {
+ *      // Second check (in case the input IS system default monospace) if it would 
+ *      // fall back to Arial
+ *      f1.style.fontFamily = "Arial";
+ *      f2.style.fontFamily = name + ",Arial";
+ *    
+ *      if ((w1 === w2) && (h1 === h2)) {
+ *        return false;
+ *      } else {
+ *        return true;
+ *      }
+ *    } else {
+ *      return true;
+ *    }
+ *  }
+ */

@@ -3,12 +3,16 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/tiff.css' />
+    <link rel='stylesheet' href='/stylesheets/messenger.css' />
+    <link rel='stylesheet' href='/stylesheets/messenger-theme-future.css' />
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script type="text/javascript" src="/javascripts/messenger.min.js"></script>
+    <script type="text/javascript" src="/javascripts/messenger-theme-future.js"></script>
     <script type="text/javascript" src="/javascripts/tiff.js"></script>
   </head>
 
-  <body>
+  <body> 
     <section id="secondary">
       <div class="container">
         <h1>Tiff</h1>
@@ -106,7 +110,7 @@
             <p><a href="//github.com/yemutex/tiff">Tiff on Github</a></p>
           </section>
           <section class="right">
-            <div class="fb-like" data-href="http://tiff.herokuapp.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="lucida grande"></div>
+            <div class="fb-like" data-href="http://tiff.herokuapp.com" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="lucida grande"></div>
             <a href="https://twitter.com/share" class="twitter-share-button" data-text="Tiff, a visual typeface diff tool.">Tweet</a>
           </section>
         </footer>
@@ -122,7 +126,9 @@
       js = d.createElement(s); js.id = id;
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
       fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
     <!-- For font detector -->
