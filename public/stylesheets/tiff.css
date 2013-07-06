@@ -131,11 +131,6 @@ body #primary .container .font-display .font-space .canvas figure.front p.font1 
   font-family: 'Helvetica';
   opacity: 0.5;
 }
-body #primary .container .font-display .font-space .canvas figure.front img {
-  position: absolute;
-  cursor: pointer;
-  padding: 3px 0 0 3px;
-}
 body #primary .container .font-display .font-space .canvas figure.back {
   color: #EEE;
   text-align: center;
