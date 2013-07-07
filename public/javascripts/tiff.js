@@ -27,7 +27,7 @@ $(document).ready(function() {
       var targets = $this.parents('.canvas').find('p.' + id);
       targets.text(letter);
     }
-  });
+  }); 
 
   $('figure.front').hover(function() {
     $(this).stop().animate({ backgroundColor: "#EEEEEE" }, 'slow');
@@ -39,6 +39,22 @@ $(document).ready(function() {
     $(this).stop().animate({ color: "#00B7FF" }, 'slow'); 
   }, function() { 
     $(this).stop().animate({ color: "#AAAAAA" }, 'slow'); // original color 
+  });
+
+  // Generate font list for autocompletion
+  var GoogleAPIKey = "AIzaSyBL9K--BHmB9QPY-Yr_Fd5NZYVOfGmBTKs";
+  var WebFontAPI = "https://www.googleapis.com/webfonts/v1/webfonts?";
+  var fontList = [];
+
+  $.getJSON(WebFontAPI, {
+    key: GoogleAPIKey,
+  })
+  .done(function(data) {
+    $.each(data.items, function(index, item) {
+      fontList.push(item.family);
+    });
+
+    $('.font-select input').autocomplete({ source: fontList });
   });
 });
 
