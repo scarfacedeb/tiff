@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -9,6 +8,12 @@ var express = require('express')
   , path = require('path');
 
 var app = express();
+
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -28,12 +33,6 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-
-app.all('/*', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
