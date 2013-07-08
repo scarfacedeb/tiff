@@ -47,6 +47,7 @@ $(document).ready(function() {
   var fontList = [];
 
   $.getJSON(WebFontAPI, {
+    dataType: "jsonp",
     key: GoogleAPIKey,
   })
   .done(function(data) {
