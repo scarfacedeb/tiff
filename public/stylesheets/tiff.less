@@ -226,4 +226,23 @@ body {
     padding: 0;
     font-size: 16px;
   }
+
+  // jQuery UI overrides
+  ul.ui-widget {
+    font-family: 'Lucida Grande', 'Helvetica', 'Arial', sans-serif;
+    .border-radius(0);
+
+    li.ui-menu-item {
+      a {
+        border-color: #FFF;
+        background: none;
+        .border-radius(0);
+
+        &:hover {
+          font-weight: bold;
+          background-color: #EEE;
+        }
+      }
+    }
+  }
 }

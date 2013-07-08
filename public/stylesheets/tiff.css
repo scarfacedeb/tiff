@@ -225,3 +225,20 @@ body #fontcheck2 {
   padding: 0;
   font-size: 16px;
 }
+body ul.ui-widget {
+  font-family: 'Lucida Grande', 'Helvetica', 'Arial', sans-serif;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+body ul.ui-widget li.ui-menu-item a {
+  border-color: #FFF;
+  background: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+body ul.ui-widget li.ui-menu-item a:hover {
+  font-weight: bold;
+  background-color: #EEE;
+}

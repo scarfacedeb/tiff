@@ -36,8 +36,14 @@
   transition: transform 1s;
 }
 
-.box-shadow (@string) {
+.box-shadow(@string) {
   -webkit-box-shadow: @string;
   -moz-box-shadow: @string;
   box-shadow: @string;
+}
+
+.border-radius(@size) {
+  -webkit-border-radius: @size;
+  -moz-border-radius: @size;
+  border-radius: @size;
 }
