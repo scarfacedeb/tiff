@@ -81,7 +81,7 @@ body #secondary p {
   padding-top: 6px;
 }
 body #secondary p a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 body #primary {
   padding: 50px 0;
@@ -215,6 +215,9 @@ body #primary .container .font-select input {
 body #primary .container .edit-letters {
   margin-bottom: 50px;
   text-align: center;
+}
+body #primary .container .edit-letters #reset {
+  color: #00b7ff;
 }
 body #primary .container .edit-letters input {
   width: 40px;

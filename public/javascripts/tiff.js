@@ -49,6 +49,18 @@ $(document).ready(function() {
     });
   });
 
+  // Reset letters
+  $('#reset').click(function() {
+    $('.font-display p.letter1').text('R');
+    $('.font-display p.letter2').text('g');
+    $('.font-display p.letter3').text('h');
+    $('.font-display p.letter4').text('e');
+    $('.edit-letters .letter1').val('R');
+    $('.edit-letters .letter2').val('g');
+    $('.edit-letters .letter3').val('h');
+    $('.edit-letters .letter4').val('e');
+  });
+
   // Footer styling
   $("footer a").hover(function() { 
     $(this).stop().animate({ color: "#00B7FF" }, 'slow'); 
