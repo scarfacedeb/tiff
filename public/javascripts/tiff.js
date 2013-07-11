@@ -27,7 +27,7 @@ $(document).ready(function() {
       var targets = $this.parents('.canvas').find('p.' + id);
       targets.text(letter);
     }
-  }); 
+  });
 
   $('figure.front').hover(function() {
     $(this).stop().animate({ backgroundColor: "#EEEEEE" }, 'slow');
@@ -35,6 +35,21 @@ $(document).ready(function() {
     $(this).stop().animate({ backgroundColor: "#FFFFFF" }, 'slow'); // original color
   });
 
+  // Edit letters
+  $('.edit-letters input').focus(function() {
+    var $this = $(this);
+    var id = $this.attr('class');
+    var letter = $this.val();
+
+    $this.val(''); 
+    $this.focusout(function() { $this.val(letter); });
+    $this.keypress(function(e) {
+      letter = String.fromCharCode(e.which);
+      $('.font-display .font-space p.' + id).text(letter);
+    });
+  });
+
+  // Footer styling
   $("footer a").hover(function() { 
     $(this).stop().animate({ color: "#00B7FF" }, 'slow'); 
   }, function() { 

@@ -87,7 +87,7 @@ body #primary {
   padding: 50px 0;
 }
 body #primary .container .font-display {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 body #primary .container .font-display .font-space {
   width: 200px;
@@ -208,8 +208,19 @@ body #primary .container .font-select label {
 }
 body #primary .container .font-select input {
   width: 200px;
-  font-size: 15px;
+  font-size: 16px;
   padding: 5px 10px;
+  margin: 0;
+}
+body #primary .container .edit-letters {
+  margin-bottom: 50px;
+  text-align: center;
+}
+body #primary .container .edit-letters input {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
   margin: 0;
 }
 body #primary .container img#end {
