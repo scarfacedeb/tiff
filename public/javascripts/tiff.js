@@ -14,22 +14,7 @@ $(document).ready(function() {
     return false;
   });
 
-  $('.btn-toggle').click(function(e) {
-    $(this).parents('.canvas').toggleClass("flipped");
-  });
-
-  $('.btn-edit').click(function(e) {
-    var $this = $(this);
-    var id = $this.siblings('input').attr('class');
-    var letter = $this.parent().find('input.' + id).val();
-
-    if (letter.length === 1) {
-      var targets = $this.parents('.canvas').find('p.' + id);
-      targets.text(letter);
-    }
-  });
-
-  $('figure.front').hover(function() {
+  $('figure.canvas').hover(function() {
     $(this).stop().animate({ backgroundColor: "#EEEEEE" }, 'slow');
   }, function() {
     $(this).stop().animate({ backgroundColor: "#FFFFFF" }, 'slow'); // original color
@@ -45,6 +30,7 @@ $(document).ready(function() {
     $this.focusout(function() { $this.val(letter); });
     $this.keypress(function(e) {
       letter = String.fromCharCode(e.which);
+      $this.val(letter);
       $('.font-display .font-space p.' + id).text(letter);
     });
   });

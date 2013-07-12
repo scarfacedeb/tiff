@@ -9,6 +9,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script src="/javascripts/jquery.zoomooz.min.js"></script>
     <script src="/javascripts/messenger.min.js"></script>
     <script src="/javascripts/messenger-theme-future.js"></script>
     <script src="/javascripts/tiff.js"></script>
@@ -41,73 +42,41 @@
 
         <section class="font-display">
           <div class="font-space">
-            <div class="canvas">
-              <figure class="front btn-toggle" title="Edit">
-                <p class="letter1 font1">R</p>
-                <p class="letter1 font2">R</p>
-              </figure>
-              <figure class="back">
-                <p>Enter a different letter</p>
-                <input class="letter1" />
-                <a class="btn btn-toggle">Back</a>
-                <a class="btn btn-toggle btn-edit">Done</a>
-              </figure>
-            </div>
+            <figure class="canvas zoomTarget" data-closeclick="true">
+              <p class="letter1 font1">R</p>
+              <p class="letter1 font2">R</p>
+            </figure>
           </div>
 
           <div class="font-space">
-            <div class="canvas">
-              <figure class="front btn-toggle" title="Edit">
-                <p class="letter2 font1">g</p>
-                <p class="letter2 font2">g</p>
-              </figure>
-              <figure class="back">
-                <p>Enter a different letter</p>
-                <input class="letter2" /> 
-                <a class="btn btn-toggle">Back</a>
-                <a class="btn btn-toggle btn-edit">Done</a>
-              </figure>
-            </div>
+            <figure class="canvas zoomTarget" data-closeclick="true">
+              <p class="letter2 font1">g</p>
+              <p class="letter2 font2">g</p>
+            </figure>
           </div>
 
           <div class="font-space">
-            <div class="canvas">
-              <figure class="front btn-toggle" title="Edit">
-                <p class="letter3 font1">h</p>
-                <p class="letter3 font2">h</p>
-              </figure>
-              <figure class="back">
-                <p>Enter a different letter</p>
-                <input class="letter3" /> 
-                <a class="btn btn-toggle">Back</a>
-                <a class="btn btn-toggle btn-edit">Done</a>
-              </figure>
-            </div>
+            <figure class="canvas zoomTarget" data-closeclick="true">
+              <p class="letter3 font1">h</p>
+              <p class="letter3 font2">h</p>
+            </figure>
           </div>
 
           <div class="font-space">
-            <div class="canvas">
-              <figure class="front btn-toggle" title="Edit">
-                <p class="letter4 font1">e</p>
-                <p class="letter4 font2">e</p>
-              </figure>
-              <figure class="back">
-                <p>Enter a different letter</p>
-                <input class="letter4" /> 
-                <a class="btn btn-toggle">Back</a>
-                <a class="btn btn-toggle btn-edit">Done</a>
-              </figure>
-            </div>
+            <figure class="canvas zoomTarget" data-closeclick="true">
+              <p class="letter4 font1">e</p>
+              <p class="letter4 font2">e</p>
+            </figure>
           </div>
         </section>
 
         <section class="edit-letters">
         <p>Edit to see different letters or <a id="reset">reset</a> to default</p>
           <div>
-            <input class="letter1" value="R" />
-            <input class="letter2" value="g" />
-            <input class="letter3" value="h" />
-            <input class="letter4" value="e" />
+            <input class="letter1" value="R" maxlength="1" />
+            <input class="letter2" value="g" maxlength="1" />
+            <input class="letter3" value="h" maxlength="1" />
+            <input class="letter4" value="e" maxlength="1" />
           </div>
         </section>
 
