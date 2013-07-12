@@ -15,7 +15,7 @@ sources.
 ### Browser Support
 
 Since the app uses some features only available in HTML5 and CSS3, use Google Chrome 
-(12+) or Mozilla Firefox (10+) for maximum browser compatibility.
+or Mozilla Firefox for maximum browser compatibility.
 
 ### Feedback
 
