@@ -56,12 +56,12 @@ $(document).ready(function() {
 
   // Generate font list for autocompletion
   var GoogleAPIKey = "AIzaSyBL9K--BHmB9QPY-Yr_Fd5NZYVOfGmBTKs";
-  var WebFontAPI = "https://www.googleapis.com/webfonts/v1/webfonts?";
+  var WebFontAPI = "https://www.googleapis.com/webfonts/v1/webfonts?callback=?";
   var fontList = [];
 
   $.getJSON(WebFontAPI, {
     dataType: "jsonp",
-    key: GoogleAPIKey,
+    key: GoogleAPIKey
   })
   .done(function(data) {
     $.each(data.items, function(index, item) {
