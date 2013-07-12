@@ -17,6 +17,9 @@ sources.
 Since the app uses some features only available in HTML5 and CSS3, use Google Chrome 
 or Mozilla Firefox for maximum browser compatibility.
 
+### Credits
+Thanks to my friends Michael Choi and Riobard Zhan for offering generous advice.
+
 ### Feedback
 
 You can reach me on Twitter [@yemutex](https://twitter.com/yemutex).
