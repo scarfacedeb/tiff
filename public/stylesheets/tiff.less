@@ -242,4 +242,51 @@ body {
       }
     }
   } 
+
+  /* Mobile Portrait */
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    .container {
+      padding: 0 20px; 
+    }
+
+    #secondary {
+      h2, p { width: 100%; }
+    }
+
+    #primary {
+      .font-select {
+        #select1, #select2 {
+          width: 100%;
+
+          input { width: 160px; }
+        }
+
+        #select1 { margin-bottom: 20px; }
+      }
+
+      .font-display {
+        text-align: center;
+
+        .font-space {
+          margin-bottom: 20px;
+        }
+      }
+
+      footer {
+        .left, .right {
+          width: 100%;
+          text-align: center;
+        }
+
+        .left {
+          margin-bottom: 20px;
+
+          p {
+            display: block;
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
 }

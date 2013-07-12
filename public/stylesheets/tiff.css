@@ -22,6 +22,8 @@ body {
   font-family: 'Lucida Grande', 'Helvetica', 'Arial', sans-serif;
   font-size: 14px;
   margin: 0;
+  /* Mobile Portrait */
+
 }
 body a {
   cursor: pointer;
@@ -222,4 +224,42 @@ body ul.ui-widget li.ui-menu-item a {
 body ul.ui-widget li.ui-menu-item a:hover {
   font-weight: bold;
   background-color: #EEE;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  body .container {
+    padding: 0 20px;
+  }
+  body #secondary h2,
+  body #secondary p {
+    width: 100%;
+  }
+  body #primary .font-select #select1,
+  body #primary .font-select #select2 {
+    width: 100%;
+  }
+  body #primary .font-select #select1 input,
+  body #primary .font-select #select2 input {
+    width: 160px;
+  }
+  body #primary .font-select #select1 {
+    margin-bottom: 20px;
+  }
+  body #primary .font-display {
+    text-align: center;
+  }
+  body #primary .font-display .font-space {
+    margin-bottom: 20px;
+  }
+  body #primary footer .left,
+  body #primary footer .right {
+    width: 100%;
+    text-align: center;
+  }
+  body #primary footer .left {
+    margin-bottom: 20px;
+  }
+  body #primary footer .left p {
+    display: block;
+    padding: 5px 0;
+  }
 }
