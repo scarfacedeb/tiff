@@ -1,0 +1,23 @@
+{
+  "name": "tiff",
+  "description": "A visual typeface diff tool.",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "1.10.1",
+    "jquery-ui": "1.10.3",
+    "messenger": "latest",
+    "requirejs": "latest"
+  },
+  "authors": [
+    {
+      "name": "Mu Ye"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "homepage": "http://tiff.herokuapp.com"
+}

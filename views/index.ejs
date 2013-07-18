@@ -3,17 +3,11 @@
   <head>
     <title><%= title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
-    <link rel="stylesheet" href="/stylesheets/messenger.css" />
-    <link rel="stylesheet" href="/stylesheets/messenger-theme-future.css" />
-    <link rel="stylesheet" href="/stylesheets/tiff.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-    <script src="/javascripts/jquery.zoomooz.min.js"></script>
-    <script src="/javascripts/messenger.min.js"></script>
-    <script src="/javascripts/messenger-theme-future.js"></script>
-    <script src="/javascripts/tiff.js"></script>
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css" />
+    <link rel="stylesheet" href="stylesheets/tiff.css" />
+    <link rel="stylesheet" href="bower_components/messenger/build/css/messenger.css" />
+    <link rel="stylesheet" href="bower_components/messenger/build/css/messenger-theme-future.css" />
+    <script data-main="javascripts/main.js" src="bower_components/requirejs/require.js"></script>
   </head>
 
   <body> 
@@ -96,7 +90,6 @@
         </footer>
       </div>
     </section>
-    <script type="text/javascript" src="//code.jquery.com/color/jquery.color-2.1.0.min.js"></script>
 
     <!-- Social Network Buttons -->
     <div id="fb-root"></div>
