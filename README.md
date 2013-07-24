@@ -18,7 +18,7 @@ Since the app uses some features only available in HTML5 and CSS3, use recent ve
 modern web browsers for maximum compatibility.
 
 ### Credits
-Thanks to my friends Michael Choi and Riobard Zhan for offering generous advice.
+Thanks to my friends Michael Choi and [Riobard Zhan](http://riobard.com/) for offering generous advice.
 
 Thanks to Mark Brown (@markbrown4) for the font aligning code.
 
