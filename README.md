@@ -20,6 +20,8 @@ modern web browsers for maximum compatibility.
 ### Credits
 Thanks to my friends Michael Choi and Riobard Zhan for offering generous advice.
 
+Thanks to Mark Brown (@markbrown4) for the font aligning code.
+
 ### Feedback
 
 You can reach me on Twitter [@yemutex](https://twitter.com/yemutex).
