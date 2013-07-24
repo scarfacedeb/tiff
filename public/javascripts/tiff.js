@@ -126,16 +126,16 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
       $this.keypress(function(e) {
         letter = String.fromCharCode(e.which);
         $this.val(letter);
-        $('.font-display .font-space p.' + id).text(letter);
+        $('.font-display .canvas span.' + id).text(letter);
       });
     });
 
     // Reset letters
     $('#reset').click(function() {
-      $('.font-display p.letter1').text('R');
-      $('.font-display p.letter2').text('g');
-      $('.font-display p.letter3').text('h');
-      $('.font-display p.letter4').text('e');
+      $('.font-display span.letter1').text('R');
+      $('.font-display span.letter2').text('g');
+      $('.font-display span.letter3').text('h');
+      $('.font-display span.letter4').text('e');
       $('.edit-letters .letter1').val('R');
       $('.edit-letters .letter2').val('g');
       $('.edit-letters .letter3').val('h');
