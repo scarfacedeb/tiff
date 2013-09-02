@@ -6,7 +6,7 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
 
   $(document).ready(function() {
     function main(fid, context) {
-      var 
+      var
       control,
       experiment,
       $this = $(context);
@@ -16,23 +16,23 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
         experiment = $('#experiment').val();
       } else {
         control = $('#experiment').val();
-        experiment = $('#control').val(); 
+        experiment = $('#control').val();
       }
 
       if (control.length < 1) {
         return;
-      } 
+      }
 
       // Display vs. Reset
       if ($this.text().toLowerCase() === "display") {
         $('#select' + fid).find('input').attr('disabled', true);
-        $this.text("Hide"); 
+        $this.text("Hide");
 
         WebFont.load({
           google: {
             families: [control]
           },
-          fontactive: function(name, description) { 
+          fontactive: function(name, description) {
                         displayAll(fid, name);
                       },
           fontinactive: function(name, description) {
@@ -50,7 +50,7 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
       }
     }
 
-    function displayAll(id, name) { 
+    function displayAll(id, name) {
       $('.font' + id).each(function() {
         this.style.fontFamily = name;
 
@@ -87,7 +87,7 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
      *      // fall back to Arial
      *      f1.style.fontFamily = "Arial";
      *      f2.style.fontFamily = name + ",Arial";
-     *    
+     *
      *      if ((w1 === w2) && (h1 === h2)) {
      *        return false;
      *      } else {
@@ -113,6 +113,15 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
       $(this).stop().animate({ backgroundColor: "#EEEEEE" }, 'slow');
     }, function() {
       $(this).stop().animate({ backgroundColor: "#FFFFFF" }, 'slow'); // original color
+    });
+
+    // View mode toggle
+    $('#overlay').click(function() {
+      $('#switch').animate({ 'marginLeft': '0px' }, 300);
+    });
+
+    $('#sideways').click(function() {
+      $('#switch').animate({ 'marginLeft': '31px' }, 300);
     });
 
     // Edit letters
@@ -143,9 +152,9 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
     });
 
     // Footer styling
-    $("footer a").hover(function() { 
-      $(this).stop().animate({ color: "#00B7FF" }, 'slow'); 
-    }, function() { 
+    $("footer a").hover(function() {
+      $(this).stop().animate({ color: "#00B7FF" }, 'slow');
+    }, function() {
       $(this).stop().animate({ color: "#AAAAAA" }, 'slow'); // original color 
     });
 
@@ -164,6 +173,6 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
       });
 
       $('.font-select input').autocomplete({ source: fontList });
-    }); 
-  }); 
+    });
+  });
 });
