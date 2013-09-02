@@ -117,10 +117,16 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
 
     // View mode toggle
     $('#overlay').click(function() {
+      $(this).removeClass('inactive');
+      $('#sideways').addClass('inactive');
+      $('.font-display').removeClass('sideways').addClass('overlay');
       $('#switch').animate({ 'marginLeft': '0px' }, 300);
     });
 
     $('#sideways').click(function() {
+      $(this).removeClass('inactive');
+      $('#overlay').addClass('inactive');
+      $('.font-display').removeClass('overlay').addClass('sideways');
       $('#switch').animate({ 'marginLeft': '31px' }, 300);
     });
 
@@ -155,7 +161,7 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
     $("footer a").hover(function() {
       $(this).stop().animate({ color: "#00B7FF" }, 'slow');
     }, function() {
-      $(this).stop().animate({ color: "#AAAAAA" }, 'slow'); // original color 
+      $(this).stop().animate({ color: "#AAAAAA" }, 'slow'); // original color
     });
 
     // Generate font list for autocompletion
