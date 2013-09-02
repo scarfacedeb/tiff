@@ -89,11 +89,11 @@ body #secondary p a {
 body #primary {
   padding: 50px 0;
 }
-body #primary .container .font-display.overlay {
+body #primary .container .font-display {
   margin-bottom: 50px;
   overflow: hidden;
 }
-body #primary .container .font-display.overlay figure.canvas {
+body #primary .container .font-display figure.canvas {
   width: 200px;
   height: 200px;
   line-height: 200px;
@@ -103,10 +103,10 @@ body #primary .container .font-display.overlay figure.canvas {
   padding: 0;
   border: 1px solid #BBB;
 }
-body #primary .container .font-display.overlay figure.canvas:hover {
+body #primary .container .font-display figure.canvas:hover {
   cursor: pointer;
 }
-body #primary .container .font-display.overlay figure.canvas span {
+body #primary .container .font-display figure.canvas span {
   width: 100%;
   font-size: 120px;
   display: inline-block;
@@ -114,14 +114,14 @@ body #primary .container .font-display.overlay figure.canvas span {
   text-align: center;
   opacity: 0;
 }
-body #primary .container .font-display.overlay figure.canvas span.font1 {
+body #primary .container .font-display figure.canvas span.font1 {
   font-family: 'Georgia';
   opacity: 0.5;
 }
-body #primary .container .font-display.overlay figure.canvas .font1 {
+body #primary .container .font-display figure.canvas .font1 {
   color: #00b7ff;
 }
-body #primary .container .font-display.overlay figure.canvas .font2 {
+body #primary .container .font-display figure.canvas .font2 {
   color: #c75646;
 }
 body #primary .container .font-select {

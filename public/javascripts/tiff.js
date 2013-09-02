@@ -116,18 +116,28 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
     });
 
     // View mode toggle
-    $('#overlay').click(function() {
+    $('#overlay').click(function() { 
+      $('#switch').animate({ 'marginLeft': '0px' }, 300);
+
       $(this).removeClass('inactive');
       $('#sideways').addClass('inactive');
-      $('.font-display').removeClass('sideways').addClass('overlay');
-      $('#switch').animate({ 'marginLeft': '0px' }, 300);
+
+      $('.font-display .canvas span').animate({
+        width: '100%',
+        marginRight: '-100%'
+      }, 300);
     });
 
     $('#sideways').click(function() {
+      $('#switch').animate({ 'marginLeft': '31px' }, 300);
+
       $(this).removeClass('inactive');
       $('#overlay').addClass('inactive');
-      $('.font-display').removeClass('overlay').addClass('sideways');
-      $('#switch').animate({ 'marginLeft': '31px' }, 300);
+
+      $('.font-display .canvas span').animate({
+        width: '50%',
+        marginRight: 0
+      }, 300)
     });
 
     // Edit letters
