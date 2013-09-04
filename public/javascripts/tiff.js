@@ -129,7 +129,7 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
     });
 
     $('#sideways').click(function() {
-      $('#switch').animate({ 'marginLeft': '31px' }, 300);
+      $('#switch').animate({ 'marginLeft': '25px' }, 300);
 
       $(this).removeClass('inactive');
       $('#overlay').addClass('inactive');

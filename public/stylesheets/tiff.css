@@ -165,7 +165,7 @@ body #primary .container .contrast-mode {
   margin-bottom: 50px;
 }
 body #primary .container .contrast-mode #switch-box {
-  width: 56px;
+  width: 50px;
   height: 25px;
   display: inline-block;
   vertical-align: middle;
