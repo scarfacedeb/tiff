@@ -4,7 +4,7 @@ body {
   color: #444;
   font-family: 'Lucida Grande', 'Helvetica', 'Arial', sans-serif;
   font-size: 14px;
-  margin: 0; 
+  margin: 0;
 
   a {
     cursor: pointer;
@@ -31,7 +31,7 @@ body {
   }
   // Track
   ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     -webkit-border-radius: 10px;
     border-radius: 10px;
   }
@@ -39,11 +39,11 @@ body {
   ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(238, 238, 238, 0.8); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background: rgba(238, 238, 238, 0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
   }
   ::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(238, 238, 238, 0.4); 
+    background: rgba(238, 238, 238, 0.4);
   }
 
   #secondary {
@@ -97,7 +97,7 @@ body {
           float: left;
           margin: 0 1px 1px 0;
           padding: 0;
-          border: 1px solid #BBB; 
+          border: 1px solid #BBB;
 
           &:hover {
             cursor: pointer;
@@ -120,6 +120,11 @@ body {
           .font1 { color: @color1; }
           .font2 { color: @color2; }
         }
+      }
+
+      .typekit {
+        display: block;
+        margin-bottom: 15px;
       }
 
       .font-select {
@@ -265,11 +270,11 @@ body {
         }
       }
     }
-  } 
+  }
 
   /* Mobile Portrait */
-  @media only screen 
-  and (min-device-width : 320px) 
+  @media only screen
+  and (min-device-width : 320px)
   and (max-device-width : 480px) {
     #secondary {
       h2, p { width: 100%; }

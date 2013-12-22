@@ -23,7 +23,6 @@ body {
   font-size: 14px;
   margin: 0;
   /* Mobile Portrait */
-
 }
 body a {
   cursor: pointer;
@@ -123,6 +122,10 @@ body #primary .container .font-display figure.canvas .font1 {
 }
 body #primary .container .font-display figure.canvas .font2 {
   color: #c75646;
+}
+body #primary .container .typekit {
+  display: block;
+  margin-bottom: 15px;
 }
 body #primary .container .font-select {
   width: 100%;

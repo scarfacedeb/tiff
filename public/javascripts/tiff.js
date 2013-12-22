@@ -9,7 +9,8 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
       var
       control,
       experiment,
-      $this = $(context);
+      $this = $(context),
+      typekit = document.getElementById('typekit').checked;
 
       if (fid === 1) {
         control = $('#control').val();
@@ -28,21 +29,27 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
         $('#select' + fid).find('input').attr('disabled', true);
         $this.text("Hide");
 
-        WebFont.load({
-          google: {
-            families: [control]
-          },
-          fontactive: function(name, description) {
-                        displayAll(fid, name);
-                      },
-          fontinactive: function(name, description) {
-                          Messenger().post({
-                            message: "Sadly Tiff couldn't recognize that font.",
-                            type: 'error',
-                            showCloseButton: true
-                          });
-                        }
-        });
+        // Either use typekit or google fonts
+        if ( typekit ) {
+           displayAll(fid, control);
+        } else {
+          WebFont.load({
+            google: {
+              families: [control]
+            },
+            fontactive: function(name, description) {
+                          displayAll(fid, name);
+                        },
+            fontinactive: function(name, description) {
+                            Messenger().post({
+                              message: "Sadly Tiff couldn't recognize that font.",
+                              type: 'error',
+                              showCloseButton: true
+                            });
+                          }
+          });
+        }
+
       } else {
         $('#select' + fid).find('input').attr('disabled', false);
         $this.text("Display");
@@ -57,7 +64,7 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
         $(this).animate({
           opacity: 0.5
         }, 500)
-      }); 
+      });
     }
 
     function hideAll(id) {
@@ -83,7 +90,7 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
      *
      *    // First check if it would fall back to system default monospace
      *    if ((w1 === w2) && (h1 === h2)) {
-     *      // Second check (in case the input IS system default monospace) if it would 
+     *      // Second check (in case the input IS system default monospace) if it would
      *      // fall back to Arial
      *      f1.style.fontFamily = "Arial";
      *      f2.style.fontFamily = name + ",Arial";
@@ -116,7 +123,7 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
     });
 
     // View mode toggle
-    $('#overlay').click(function() { 
+    $('#overlay').click(function() {
       $('#switch').animate({ 'marginLeft': '0px' }, 300);
 
       $(this).removeClass('inactive');
@@ -146,7 +153,7 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
       var id = $this.attr('class');
       var letter = $this.val();
 
-      $this.val(''); 
+      $this.val('');
       $this.focusout(function() { $this.val(letter); });
       $this.keypress(function(e) {
         letter = String.fromCharCode(e.which);
@@ -179,16 +186,16 @@ define(['jquery', 'jquery-ui', 'jquery-color', 'webfont', 'zoomooz', 'messenger'
     var WebFontAPI = "https://www.googleapis.com/webfonts/v1/webfonts?callback=?";
     var fontList = [];
 
-    $.getJSON(WebFontAPI, {
-      dataType: "jsonp",
-      key: GoogleAPIKey
-    })
-    .done(function(data) {
-      $.each(data.items, function(index, item) {
-        fontList.push(item.family);
-      });
+    // $.getJSON(WebFontAPI, {
+    //   dataType: "jsonp",
+    //   key: GoogleAPIKey
+    // })
+    // .done(function(data) {
+    //   $.each(data.items, function(index, item) {
+    //     fontList.push(item.family);
+    //   });
 
-      $('.font-select input').autocomplete({ source: fontList });
-    });
+    //   $('.font-select input').autocomplete({ source: fontList });
+    // });
   });
 });
